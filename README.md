@@ -10,8 +10,24 @@ The following slicers are supported:
 * Slic3r
 * Cura
 * IdeaMaker
+* Simplify3D
 
 ## Installation and usage
+
+### Simplify3D
+
+This will seperate objects by process name for object cancellation and adaptive bed meshing.
+
+Download and save preprocess_cancellation.py to a location on your pc.
+
+Make sure you are not stripping comments in the post processing script.
+
+Add the following in your post processing script, update the paths to match your system:
+"C:\Windows\py.exe" "c:\temp\preprocess_cancellation.py" "[output_dir]/[output_filename].gcode"
+
+Add the following line at the start of the ending script:
+; end exclusion
+
 
 ### SuperSlicer, PrusaSlicer, and Slic3r
 
